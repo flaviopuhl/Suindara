@@ -1,0 +1,212 @@
+10:20:49.861 > ets Jun  8 2016 00:22:57
+10:20:49.865 > 
+10:20:49.865 > rst:0x5 (DEEPSLEEP_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+10:20:49.870 > configsip: 0, SPIWP:0xee
+10:20:49.871 > clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+10:20:49.878 > mode:DIO, clock div:2
+10:20:49.880 > load:0x3fff0018,len:4
+10:20:49.882 > load:0x3fff001c,len:1044
+10:20:49.884 > load:0x40078000,len:10124
+10:20:49.886 > load:0x40080400,len:5828
+10:20:49.888 > entry 0x400806a8
+10:20:51.254 > [I][Narceja-100.cpp:361] setup(): SW version: ���?/
+10:20:51.266 > [I][Narceja-100.cpp:365] setup(): Boot number: 2
+10:20:51.266 > [I][Narceja-100.cpp:124] print_wakeup_reason(): Wakeup caused by timer
+10:20:51.271 > E (1035) sleep: Conflicting wake-up triggers: touch / ULP
+10:20:51.276 > [I][Narceja-100.cpp:389] setup(): Setup sleep for every 30 Seconds
+10:20:51.281 > [I][Narceja-100.cpp:392] setup(): Configured all RTC Peripherals to be powered down in sleep
+10:20:51.290 > [I][Narceja-100.cpp:195] setup_wifi(): Connecting to CasaDoTheodoro1
+10:20:51.827 > [I][Narceja-100.cpp:203] setup_wifi(): .
+10:20:52.329 > [I][Narceja-100.cpp:203] setup_wifi(): .
+10:20:52.829 > [I][Narceja-100.cpp:203] setup_wifi(): .
+10:20:53.329 > [I][Narceja-100.cpp:203] setup_wifi(): .
+10:20:53.829 > [I][Narceja-100.cpp:203] setup_wifi(): .
+10:20:53.834 > [I][Narceja-100.cpp:207] setup_wifi(): WiFi connected
+10:20:53.838 > [I][Narceja-100.cpp:404] setup(): Broker MQTT setting server... 
+10:20:53.845 > [I][Narceja-100.cpp:407] setup(): Starting timeclient server... 
+10:20:53.850 > [I][Narceja-100.cpp:299] meas_cnt_read(): Current counter : 1192486
+10:20:53.855 > [I][Narceja-100.cpp:220] reconnect(): Attempting MQTT connection...
+10:20:54.694 > [I][Narceja-100.cpp:222] reconnect(): MQTT broker connected
+10:20:54.700 > [I][Narceja-100.cpp:223] reconnect(): Publishing to: Narceja/data
+10:20:55.000 > [I][Narceja-100.cpp:299] meas_cnt_read(): Current counter : 1192486
+10:20:55.008 > [I][Narceja-100.cpp:285] batt_level(): Battery voltage level : 0.000000
+10:20:55.014 > [I][Narceja-100.cpp:330] SerializeAndPublish(): 
+10:20:55.019 > JSON Payload:
+10:20:55.020 > {
+10:20:55.020 >   "Device": "Narceja",
+10:20:55.021 >   "Version": "Narceja-100 Mar  7 2022 12:28:33",
+10:20:55.026 >   "RSSI (db)": -36,
+10:20:55.028 >   "IP": "192.168.158.9",
+10:20:55.030 >   "LastRoll": "10Mar2022 10-20-54",
+10:20:55.033 >   "UpTime (boots)": 2,
+10:20:55.035 >   "WakeUpReason": "WAKEUP_TIMER",
+10:20:55.038 >   "MeasCounter": 1192486,
+10:20:55.040 >   "BattVoltLvl": 0
+10:20:55.043 > }
+10:20:55.043 > [I][Narceja-100.cpp:334] SerializeAndPublish(): Sending message to MQTT topic
+10:20:55.541 > [I][Narceja-100.cpp:152] prepareAndgoDeepSleep(): Bluetooth disabled
+10:20:55.550 > [I][Narceja-100.cpp:158] prepareAndgoDeepSleep(): Bluetooth controller disabled
+10:20:55.555 > [I][Narceja-100.cpp:164] prepareAndgoDeepSleep(): WiFi disconnected
+10:20:55.561 > [W][WiFiGeneric.cpp:391] _eventCallback(): Reason: 8 - ASSOC_LEAVE
+10:20:55.590 > [I][Narceja-100.cpp:171] prepareAndgoDeepSleep(): WiFi stopped
+10:20:55.597 > [I][Narceja-100.cpp:177] prepareAndgoDeepSleep(): WiFi de-initiated
+10:20:55.603 > [I][Narceja-100.cpp:183] prepareAndgoDeepSleep(): Going to sleep now
+10:21:25.476 > ets Jun  8 2016 00:22:57
+10:21:25.482 > 
+10:21:25.482 > rst:0x5 (DEEPSLEEP_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+10:21:25.485 > configsip: 0, SPIWP:0xee
+10:21:25.487 > clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+10:21:25.494 > mode:DIO, clock div:2
+10:21:25.496 > load:0x3fff0018,len:4
+10:21:25.498 > load:0x3fff001c,len:1044
+10:21:25.500 > load:0x40078000,len:10124
+10:21:25.501 > load:0x40080400,len:5828
+10:21:25.505 > entry 0x400806a8
+10:21:26.871 > [I][Narceja-100.cpp:361] setup(): SW version: ␐��?/
+10:21:26.877 > [I][Narceja-100.cpp:365] setup(): Boot number: 3
+10:21:26.881 > [I][Narceja-100.cpp:124] print_wakeup_reason(): Wakeup caused by timer
+10:21:26.887 > E (1036) sleep: Conflicting wake-up triggers: touch / ULP
+10:21:26.892 > [I][Narceja-100.cpp:389] setup(): Setup sleep for every 30 Seconds
+10:21:26.901 > [I][Narceja-100.cpp:392] setup(): Configured all RTC Peripherals to be powered down in sleep
+10:21:26.907 > [I][Narceja-100.cpp:195] setup_wifi(): Connecting to CasaDoTheodoro1
+10:21:27.446 > [I][Narceja-100.cpp:203] setup_wifi(): .
+10:21:27.946 > [I][Narceja-100.cpp:203] setup_wifi(): .
+10:21:28.446 > [I][Narceja-100.cpp:203] setup_wifi(): .
+10:21:28.946 > [I][Narceja-100.cpp:203] setup_wifi(): .
+10:21:29.446 > [I][Narceja-100.cpp:203] setup_wifi(): .
+10:21:29.451 > [I][Narceja-100.cpp:207] setup_wifi(): WiFi connected
+10:21:29.456 > [I][Narceja-100.cpp:404] setup(): Broker MQTT setting server... 
+10:21:29.462 > [I][Narceja-100.cpp:407] setup(): Starting timeclient server... 
+10:21:29.467 > [I][Narceja-100.cpp:299] meas_cnt_read(): Current counter : 1192486
+10:21:29.473 > [I][Narceja-100.cpp:220] reconnect(): Attempting MQTT connection...
+10:21:30.425 > [I][Narceja-100.cpp:222] reconnect(): MQTT broker connected
+10:21:30.432 > [I][Narceja-100.cpp:223] reconnect(): Publishing to: Narceja/data
+10:21:30.645 > [I][Narceja-100.cpp:299] meas_cnt_read(): Current counter : 1192486
+10:21:30.652 > [I][Narceja-100.cpp:285] batt_level(): Battery voltage level : 0.000000
+10:21:30.658 > [I][Narceja-100.cpp:330] SerializeAndPublish(): 
+10:21:30.663 > JSON Payload:
+10:21:30.664 > {
+10:21:30.665 >   "Device": "Narceja",
+10:21:30.667 >   "Version": "Narceja-100 Mar  7 2022 12:28:33",
+10:21:30.671 >   "RSSI (db)": -45,
+10:21:30.673 >   "IP": "192.168.158.9",
+10:21:30.675 >   "LastRoll": "10Mar2022 10-21-30",
+10:21:30.678 >   "UpTime (boots)": 3,
+10:21:30.680 >   "WakeUpReason": "WAKEUP_TIMER",
+10:21:30.683 >   "MeasCounter": 1192486,
+10:21:30.686 >   "BattVoltLvl": 0
+10:21:30.687 > }
+10:21:30.688 > [I][Narceja-100.cpp:334] SerializeAndPublish(): Sending message to MQTT topic
+10:21:31.186 > [I][Narceja-100.cpp:152] prepareAndgoDeepSleep(): Bluetooth disabled
+10:21:31.194 > [I][Narceja-100.cpp:158] prepareAndgoDeepSleep(): Bluetooth controller disabled
+10:21:31.199 > [I][Narceja-100.cpp:164] prepareAndgoDeepSleep(): WiFi disconnected
+10:21:31.205 > [W][WiFiGeneric.cpp:391] _eventCallback(): Reason: 8 - ASSOC_LEAVE
+10:21:31.234 > [I][Narceja-100.cpp:171] prepareAndgoDeepSleep(): WiFi stopped
+10:21:31.240 > [I][Narceja-100.cpp:177] prepareAndgoDeepSleep(): WiFi de-initiated
+10:21:31.247 > [I][Narceja-100.cpp:183] prepareAndgoDeepSleep(): Going to sleep now
+10:22:01.084 > ets Jun  8 2016 00:22:57
+10:22:01.088 > 
+10:22:01.088 > rst:0x5 (DEEPSLEEP_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+10:22:01.093 > configsip: 0, SPIWP:0xee
+10:22:01.095 > clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+10:22:01.102 > mode:DIO, clock div:2
+10:22:01.104 > load:0x3fff0018,len:4
+10:22:01.105 > load:0x3fff001c,len:1044
+10:22:01.107 > load:0x40078000,len:10124
+10:22:01.110 > load:0x40080400,len:5828
+10:22:01.112 > entry 0x400806a8
+10:22:02.479 > [I][Narceja-100.cpp:361] setup(): SW version: ���?/
+10:22:02.485 > [I][Narceja-100.cpp:365] setup(): Boot number: 4
+10:22:02.489 > [I][Narceja-100.cpp:124] print_wakeup_reason(): Wakeup caused by timer
+10:22:02.495 > E (1036) sleep: Conflicting wake-up triggers: touch / ULP
+10:22:02.501 > [I][Narceja-100.cpp:389] setup(): Setup sleep for every 30 Seconds
+10:22:02.506 > [I][Narceja-100.cpp:392] setup(): Configured all RTC Peripherals to be powered down in sleep
+10:22:02.515 > [I][Narceja-100.cpp:195] setup_wifi(): Connecting to CasaDoTheodoro1
+10:22:03.054 > [I][Narceja-100.cpp:203] setup_wifi(): .
+10:22:03.555 > [I][Narceja-100.cpp:203] setup_wifi(): .
+10:22:04.055 > [I][Narceja-100.cpp:203] setup_wifi(): .
+10:22:04.555 > [I][Narceja-100.cpp:203] setup_wifi(): .
+10:22:05.055 > [I][Narceja-100.cpp:203] setup_wifi(): .
+10:22:05.059 > [I][Narceja-100.cpp:207] setup_wifi(): WiFi connected
+10:22:05.065 > [I][Narceja-100.cpp:404] setup(): Broker MQTT setting server... 
+10:22:05.070 > [I][Narceja-100.cpp:407] setup(): Starting timeclient server... 
+10:22:05.075 > [I][Narceja-100.cpp:299] meas_cnt_read(): Current counter : 1192486
+10:22:05.081 > [I][Narceja-100.cpp:220] reconnect(): Attempting MQTT connection...
+10:22:07.297 > [I][Narceja-100.cpp:222] reconnect(): MQTT broker connected
+10:22:07.304 > [I][Narceja-100.cpp:223] reconnect(): Publishing to: Narceja/data
+10:22:07.746 > [I][Narceja-100.cpp:299] meas_cnt_read(): Current counter : 1192486
+10:22:07.755 > [I][Narceja-100.cpp:285] batt_level(): Battery voltage level : 0.000000
+10:22:07.760 > [I][Narceja-100.cpp:330] SerializeAndPublish(): 
+10:22:07.764 > JSON Payload:
+10:22:07.765 > {
+10:22:07.766 >   "Device": "Narceja",
+10:22:07.768 >   "Version": "Narceja-100 Mar  7 2022 12:28:33",
+10:22:07.772 >   "RSSI (db)": -42,
+10:22:07.774 >   "IP": "192.168.158.9",
+10:22:07.776 >   "LastRoll": "10Mar2022 10-22-07",
+10:22:07.779 >   "UpTime (boots)": 4,
+10:22:07.781 >   "WakeUpReason": "WAKEUP_TIMER",
+10:22:07.784 >   "MeasCounter": 1192486,
+10:22:07.786 >   "BattVoltLvl": 0
+10:22:07.789 > }
+10:22:07.789 > [I][Narceja-100.cpp:334] SerializeAndPublish(): Sending message to MQTT topic
+10:22:08.286 > [I][Narceja-100.cpp:152] prepareAndgoDeepSleep(): Bluetooth disabled
+10:22:08.293 > [I][Narceja-100.cpp:158] prepareAndgoDeepSleep(): Bluetooth controller disabled
+10:22:08.300 > [I][Narceja-100.cpp:164] prepareAndgoDeepSleep(): WiFi disconnected
+10:22:08.307 > [W][WiFiGeneric.cpp:391] _eventCallback(): Reason: 8 - ASSOC_LEAVE
+10:22:08.312 > [I][Narceja-100.cpp:171] prepareAndgoDeepSleep(): WiFi stopped
+10:22:08.319 > [I][Narceja-100.cpp:177] prepareAndgoDeepSleep(): WiFi de-initiated
+10:22:08.324 > [I][Narceja-100.cpp:183] prepareAndgoDeepSleep(): Going to sleep now
+10:22:38.163 > ets Jun  8 2016 00:22:57
+10:22:38.166 > 
+10:22:38.166 > rst:0x5 (DEEPSLEEP_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+10:22:38.171 > configsip: 0, SPIWP:0xee
+10:22:38.173 > clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+10:22:38.180 > mode:DIO, clock div:2
+10:22:38.182 > load:0x3fff0018,len:4
+10:22:38.184 > load:0x3fff001c,len:1044
+10:22:38.187 > load:0x40078000,len:10124
+10:22:38.188 > load:0x40080400,len:5828
+10:22:38.191 > entry 0x400806a8
+10:22:39.557 > [I][Narceja-100.cpp:361] setup(): SW version: ���?/
+10:22:39.563 > [I][Narceja-100.cpp:365] setup(): Boot number: 5
+10:22:39.567 > [I][Narceja-100.cpp:124] print_wakeup_reason(): Wakeup caused by timer
+10:22:39.572 > E (1036) sleep: Conflicting wake-up triggers: touch / ULP
+10:22:39.578 > [I][Narceja-100.cpp:389] setup(): Setup sleep for every 30 Seconds
+10:22:39.584 > [I][Narceja-100.cpp:392] setup(): Configured all RTC Peripherals to be powered down in sleep
+10:22:39.592 > [I][Narceja-100.cpp:195] setup_wifi(): Connecting to CasaDoTheodoro1
+10:22:40.132 > [I][Narceja-100.cpp:203] setup_wifi(): .
+10:22:40.633 > [I][Narceja-100.cpp:203] setup_wifi(): .
+10:22:41.133 > [I][Narceja-100.cpp:203] setup_wifi(): .
+10:22:41.633 > [I][Narceja-100.cpp:203] setup_wifi(): .
+10:22:42.133 > [I][Narceja-100.cpp:203] setup_wifi(): .
+10:22:42.138 > [I][Narceja-100.cpp:207] setup_wifi(): WiFi connected
+10:22:42.143 > [I][Narceja-100.cpp:404] setup(): Broker MQTT setting server... 
+10:22:42.149 > [I][Narceja-100.cpp:407] setup(): Starting timeclient server... 
+10:22:42.154 > [I][Narceja-100.cpp:299] meas_cnt_read(): Current counter : 1192486
+10:22:42.159 > [I][Narceja-100.cpp:220] reconnect(): Attempting MQTT connection...
+10:22:43.132 > [I][Narceja-100.cpp:222] reconnect(): MQTT broker connected
+10:22:43.138 > [I][Narceja-100.cpp:223] reconnect(): Publishing to: Narceja/data
+10:22:43.390 > [I][Narceja-100.cpp:299] meas_cnt_read(): Current counter : 1192486
+10:22:43.398 > [I][Narceja-100.cpp:285] batt_level(): Battery voltage level : 0.000000
+10:22:43.404 > [I][Narceja-100.cpp:330] SerializeAndPublish(): 
+10:22:43.408 > JSON Payload:
+10:22:43.409 > {
+10:22:43.409 >   "Device": "Narceja",
+10:22:43.411 >   "Version": "Narceja-100 Mar  7 2022 12:28:33",
+10:22:43.417 >   "RSSI (db)": -35,
+10:22:43.419 >   "IP": "192.168.158.9",
+10:22:43.420 >   "LastRoll": "10Mar2022 10-22-43",
+10:22:43.423 >   "UpTime (boots)": 5,
+10:22:43.425 >   "WakeUpReason": "WAKEUP_TIMER",
+10:22:43.429 >   "MeasCounter": 1192486,
+10:22:43.432 >   "BattVoltLvl": 0
+10:22:43.433 > }
+10:22:43.433 > [I][Narceja-100.cpp:334] SerializeAndPublish(): Sending message to MQTT topic
+10:22:43.931 > [I][Narceja-100.cpp:152] prepareAndgoDeepSleep(): Bluetooth disabled
+10:22:43.939 > [I][Narceja-100.cpp:158] prepareAndgoDeepSleep(): Bluetooth controller disabled
+10:22:43.945 > [I][Narceja-100.cpp:164] prepareAndgoDeepSleep(): WiFi disconnected
+10:22:43.952 > [W][WiFiGeneric.cpp:391] _eventCallback(): Reason: 8 - ASSOC_LEAVE
+10:22:43.958 > [I][Narceja-100.cpp:171] prepareAndgoDeepSleep(): WiFi stopped
+10:22:43.962 > [I][Narceja-100.cpp:177] prepareAndgoDeepSleep(): WiFi de-initiated
+10:22:43.972 > [I][Narceja-100.cpp:183] prepareAndgoDeepSleep(): Going to sleep now
