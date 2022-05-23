@@ -81,6 +81,7 @@ const char *ID = "SuindaraDev";                               // Name of our dev
 const char *TOPIC1 = "Seriema/data";                          // Topic to subcribe to
 const char *TOPIC2 = "Harpia/data";                           // Topic to subcribe to
 const char *TOPIC3 = "Narceja/data";                          // Topic to subcribe to
+const char *TOPIC4 = "DuinoFarm/data";                          // Topic to subcribe to
 
 const char* BROKER_MQTT = "broker.hivemq.com";
 //const char* BROKER_MQTT = "mqtt.eclipseprojects.io";          // MQTT Cloud Broker URL
@@ -142,21 +143,35 @@ char const* WakeUpReason_topic3 = "empty";
 float       MeasCounter_topic3  = 0;
 float       BattVoltLvl_topic3  = 0;
 
+char const* Device_topic4       = "empty";
+char const* Version_topic4      = "empty";
+float       RSSI_topic4         = 0;
+char const* IP_topic4           = "empty";
+char const* LastRoll_topic4     = "empty";
+int         Uptime_topic4       = -1;
+float       Totalbalance_topic4 = 0;
+float       Totalminers_topic4  = 0;
+float       Totalhashrate_topic4  = 0;
+
 String Device_topic1str         = "empty";
 String Device_topic2str         = "empty";
 String Device_topic3str         = "empty";
+String Device_topic4str         = "empty";
 
 String Version_topic1str        = "empty";
 String Version_topic2str        = "empty";
 String Version_topic3str        = "empty";
+String Version_topic4str        = "empty";
 
 String IP_topic1str             = "empty";
 String IP_topic2str             = "empty";
 String IP_topic3str             = "empty";
+String IP_topic4str             = "empty";
 
 String LastRoll_topic1str       = "empty";
 String LastRoll_topic2str       = "empty";
 String LastRoll_topic3str       = "empty";
+String LastRoll_topic4str       = "empty";
 
 /*+--------------------------------------------------------------------------------------+
  *| MQTT callback                                                                        |
@@ -291,6 +306,40 @@ void callback(char* topic, byte* payload, unsigned int length) {
 
     }   
 
+     if (strcmp(topic,TOPIC4)==0) {
+
+    Serial.print("allocating data for [");
+      Serial.print(topic);
+      Serial.println("] ");
+      Serial.println();
+
+    Device_topic4    = doc["Device"];
+      Device_topic4str  = Device_topic4;
+    Version_topic4   = doc["Version"];
+      Version_topic4str = Version_topic4;
+    RSSI_topic4      = doc["RSSI (db)"];
+    IP_topic4        = doc["IP"];
+      IP_topic4str = IP_topic4;
+    LastRoll_topic4  = doc["LastRoll"];
+      LastRoll_topic4str  = LastRoll_topic4;
+    Uptime_topic4    = doc["UpTime (boots)"];
+    Totalbalance_topic4  = doc["Total balance"];
+    Totalminers_topic4      = doc["Total miners"];
+    Totalhashrate_topic4      = doc["Total hashrate"];
+
+    Serial.print(" Topic4 Device    = ");    Serial.println(Device_topic4str);
+    Serial.print(" Topic4 Version   = ");    Serial.println(Version_topic4str);
+    Serial.print(" Topic4 RSSI      = ");    Serial.println(RSSI_topic4);
+    Serial.print(" Topic4 IP        = ");    Serial.println(IP_topic4str);
+    Serial.print(" Topic4 LastRoll  = ");    Serial.println(LastRoll_topic4str);
+    Serial.print(" Topic4 Uptime    = ");    Serial.println(Uptime_topic4);
+    Serial.print(" Topic4 Totalbalance    = ");    Serial.println(Totalbalance_topic4);
+    Serial.print(" Topic4 Totalminers  = ");    Serial.println(Totalminers_topic4);
+    Serial.print(" Topic4 Total hashrate   = ");    Serial.println(Totalhashrate_topic4);
+    Serial.println();
+
+    }   
+
 }
 
 /*+--------------------------------------------------------------------------------------+
@@ -336,6 +385,8 @@ void reconnect() {
         Serial.print("Subscribing to: "); Serial.println(TOPIC2);
       client.subscribe(TOPIC3);                             // Subscribe to MQTT  
         Serial.print("Subscribing to: "); Serial.println(TOPIC3);
+      client.subscribe(TOPIC4);                             // Subscribe to MQTT  
+        Serial.print("Subscribing to: "); Serial.println(TOPIC4);
         Serial.print("All topics subscribed.");
         Serial.print("\n\n");
 
@@ -432,6 +483,16 @@ void setup() {
       out["WakeReason_topic3"]= WakeUpReason_topic3;
       out["MeasCntr_topic3"]  = MeasCounter_topic3;
       out["BattLvl_topic3"]   = BattVoltLvl_topic3;
+
+      out["Device_topic4"]    = Device_topic4str;
+      out["Version_topic4"]   = Version_topic4str;
+      out["RSSI_topic4"]      = RSSI_topic4;
+      out["IP_topic4"]        = IP_topic4str;
+      out["LastRoll_topic4"]  = LastRoll_topic4str;
+      out["Uptime_topic4"]    = Uptime_topic4;
+      out["Totalbalance_topic4"]= Totalbalance_topic4;
+      out["Totalminers_topic4"]  = Totalminers_topic4;
+      out["Totalhashrate_topic4"]   = Totalhashrate_topic4;
       }; 
 
 }
@@ -495,6 +556,17 @@ void loop() {
     Serial.print(" Topic3 WakeReason= ");    Serial.println(WakeUpReason_topic3);
     Serial.print(" Topic3 MeasCntr  = ");    Serial.println(MeasCounter_topic3);
     Serial.print(" Topic3 BattLvl   = ");    Serial.println(BattVoltLvl_topic3);
+    Serial.println();
+
+    Serial.print(" Topic4 Device    = ");    Serial.println(Device_topic4str);
+    Serial.print(" Topic4 Version   = ");    Serial.println(Version_topic4str);
+    Serial.print(" Topic4 RSSI      = ");    Serial.println(RSSI_topic4);
+    Serial.print(" Topic4 IP        = ");    Serial.println(IP_topic4str);
+    Serial.print(" Topic4 LastRoll  = ");    Serial.println(LastRoll_topic4str);
+    Serial.print(" Topic4 Uptime    = ");    Serial.println(Uptime_topic4);
+    Serial.print(" Topic4 Totalbalance= ");    Serial.println(Totalbalance_topic4);
+    Serial.print(" Topic4 Totalminers  = ");    Serial.println(Totalminers_topic4);
+    Serial.print(" Topic4 Totalhashrate   = ");    Serial.println(Totalhashrate_topic4);
     Serial.println();
 
     Serial.println("Loop Main: End");
