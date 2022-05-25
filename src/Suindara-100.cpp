@@ -69,6 +69,7 @@ Upload settings
 #define _DISABLE_TLS_                                 // Needed for Thinger
 #include <ThingerESP8266.h>                           // Thinger
 #define THINGER_SERIAL_DEBUG
+#include <ThingerESP8266OTA.h>
 
 /*+--------------------------------------------------------------------------------------+
  *| Constants declaration                                                                |
@@ -99,6 +100,7 @@ PubSubClient client(wclient);                                 /* Setup MQTT clie
 #define device_Id "HomenoideGateway"                          /* Thinger */
 #define device_credentials "jt0J73!BihBvbXe7"                 /* Thinger */
 ThingerESP8266 thing(user, device_Id, device_credentials);    /* Thinger */
+ThingerESP8266OTA ota(thing);
 
 /*+--------------------------------------------------------------------------------------+
  *| Global Variables                                                                     |
@@ -446,6 +448,8 @@ void setup() {
 
   Serial.println("Initialize MQTT callback routine.. "); 	
     client.setCallback(callback);                     // Initialize the callback routine
+
+  Serial.println("OTA enabled.. ");
 
   Serial.println("Declaring Thinger variables.. ");
     thing["data"] >> [](pson& out){  
