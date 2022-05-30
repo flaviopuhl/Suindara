@@ -82,7 +82,7 @@ const char *ID = "SuindaraDev";                               // Name of our dev
 const char *TOPIC1 = "Seriema/data";                          // Topic to subcribe to
 const char *TOPIC2 = "Harpia/data";                           // Topic to subcribe to
 const char *TOPIC3 = "Narceja/data";                          // Topic to subcribe to
-const char *TOPIC4 = "DuinoFarm/data";                          // Topic to subcribe to
+const char *TOPIC4 = "Duinofarm/data";                          // Topic to subcribe to
 
 const char* BROKER_MQTT = "broker.hivemq.com";
 //const char* BROKER_MQTT = "mqtt.eclipseprojects.io";          // MQTT Cloud Broker URL
