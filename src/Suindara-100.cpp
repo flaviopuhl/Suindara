@@ -70,6 +70,7 @@ Upload settings
 #include <ThingerESP8266.h>                           // Thinger
 #define THINGER_SERIAL_DEBUG
 #include <ThingerESP8266OTA.h>
+#include <ThingerConsole.h>
 
 /*+--------------------------------------------------------------------------------------+
  *| Constants declaration                                                                |
@@ -82,7 +83,7 @@ const char *ID = "SuindaraDev";                               // Name of our dev
 const char *TOPIC1 = "Seriema/data";                          // Topic to subcribe to
 const char *TOPIC2 = "Harpia/data";                           // Topic to subcribe to
 const char *TOPIC3 = "Narceja/data";                          // Topic to subcribe to
-const char *TOPIC4 = "Duinofarm/data";                          // Topic to subcribe to
+const char *TOPIC4 = "Duinofarm/data";                        // Topic to subcribe to
 
 const char* BROKER_MQTT = "broker.hivemq.com";
 //const char* BROKER_MQTT = "mqtt.eclipseprojects.io";          // MQTT Cloud Broker URL
@@ -101,6 +102,7 @@ PubSubClient client(wclient);                                 /* Setup MQTT clie
 #define device_credentials "jt0J73!BihBvbXe7"                 /* Thinger */
 ThingerESP8266 thing(user, device_Id, device_credentials);    /* Thinger */
 ThingerESP8266OTA ota(thing);
+ThingerConsole console(thing);
 
 /*+--------------------------------------------------------------------------------------+
  *| Global Variables                                                                     |
