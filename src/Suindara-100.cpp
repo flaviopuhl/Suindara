@@ -436,6 +436,8 @@ void setup() {
   Serial.begin(115200);                               // Start serial communication at 115200 baud
     delay(100);
   
+  pinMode(2, OUTPUT);                                 // Buit-in led
+  
   swversion = (swversion.substring((swversion.indexOf(".")), (swversion.lastIndexOf("\\")) + 1))+" "+__DATE__+" "+__TIME__;   
    Serial.print("SW version: ");
    Serial.println(swversion);
@@ -452,6 +454,9 @@ void setup() {
     client.setCallback(callback);                     // Initialize the callback routine
 
   Serial.println("OTA enabled.. ");
+
+  // digital pin control example (i.e. turning on/off a light, a relay, configuring a parameter, etc)
+  thing["GPIO_02"] << digitalPin(2); // built-in led
 
   Serial.println("Declaring Thinger variables.. ");
     thing["data"] >> [](pson& out){  
