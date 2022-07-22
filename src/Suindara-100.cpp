@@ -531,6 +531,7 @@ void setup() {
     delay(500);
   
   pinMode(2, OUTPUT);                                 // Buit-in led [GPIO02 or D4]
+  digitalWrite(2,HIGH);
   
   swversion = (swversion.substring((swversion.indexOf(".")), (swversion.lastIndexOf("\\")) + 1))+" "+__DATE__+" "+__TIME__;   
    Serial.printf("\nSW version: ");
